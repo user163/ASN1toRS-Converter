@@ -6,10 +6,10 @@ class ASN1toRSconverter
 {
     static void Main(string[] args)
     {
-        runAllTests();
+        RunAllTests();
     }
 
-    public static void runAllTests()
+    public static void RunAllTests()
     {
         // 0221/0221
         // 3046022100e9015c081c3520c4415a9a61ea22abb06bb4787f927c6d9a4690c4d66ab35b11022100d3341aa2b54865c7751909aee62ac0cc598b02c235a5d09da0477e3e5fe1cd87
@@ -17,7 +17,7 @@ class ASN1toRSconverter
         // e9015c081c3520c4415a9a61ea22abb06bb4787f927c6d9a4690c4d66ab35b11d3341aa2b54865c7751909aee62ac0cc598b02c235a5d09da0477e3e5fe1cd87
         string referenceASN1_1 = "3046022100e9015c081c3520c4415a9a61ea22abb06bb4787f927c6d9a4690c4d66ab35b11022100d3341aa2b54865c7751909aee62ac0cc598b02c235a5d09da0477e3e5fe1cd87";
         string referenceRS_1 = "e9015c081c3520c4415a9a61ea22abb06bb4787f927c6d9a4690c4d66ab35b11d3341aa2b54865c7751909aee62ac0cc598b02c235a5d09da0477e3e5fe1cd87";
-        test(referenceRS_1, referenceASN1_1);
+        Test(referenceRS_1, referenceASN1_1);
 
         // 0221/0220
         // 3045022100b947b00152148a729e80347c728c788a3a85f058acb1ab23fdca13fd9dacc6d802202f8a6cd801b9ca361d306c3155c9bc9bd0174addcb29ad64949f767f1aa1e6a3
@@ -25,7 +25,7 @@ class ASN1toRSconverter
         // b947b00152148a729e80347c728c788a3a85f058acb1ab23fdca13fd9dacc6d82f8a6cd801b9ca361d306c3155c9bc9bd0174addcb29ad64949f767f1aa1e6a3
         string referenceASN1_2 = "3045022100b947b00152148a729e80347c728c788a3a85f058acb1ab23fdca13fd9dacc6d802202f8a6cd801b9ca361d306c3155c9bc9bd0174addcb29ad64949f767f1aa1e6a3";
         string referenceRS_2 = "b947b00152148a729e80347c728c788a3a85f058acb1ab23fdca13fd9dacc6d82f8a6cd801b9ca361d306c3155c9bc9bd0174addcb29ad64949f767f1aa1e6a3";
-        test(referenceRS_2, referenceASN1_2);
+        Test(referenceRS_2, referenceASN1_2);
 
         // 0220/0221
         // 3045022044f65884b2531de2c09cfe360a7aff87349989f4270a21570a1ace0c898602c0022100e26b69913454bf94c7cc5312fc071823f2d7837951bb82e9b157944ba15150b3
@@ -33,7 +33,7 @@ class ASN1toRSconverter
         // 44f65884b2531de2c09cfe360a7aff87349989f4270a21570a1ace0c898602c0e26b69913454bf94c7cc5312fc071823f2d7837951bb82e9b157944ba15150b3
         string referenceASN1_3 = "3045022044f65884b2531de2c09cfe360a7aff87349989f4270a21570a1ace0c898602c0022100e26b69913454bf94c7cc5312fc071823f2d7837951bb82e9b157944ba15150b3";
         string referenceRS_3 = "44f65884b2531de2c09cfe360a7aff87349989f4270a21570a1ace0c898602c0e26b69913454bf94c7cc5312fc071823f2d7837951bb82e9b157944ba15150b3";
-        test(referenceRS_3, referenceASN1_3);
+        Test(referenceRS_3, referenceASN1_3);
 
         // 0220/0220
         // 3044022046083ba46a9cabd6897638241ceafa7466b0acd0d7713ffaa8b4fd741547bcfa022067168b0fc7e8ed1d53b3b53f2f3c8ca75cb1e66b456bbe63296d2a97dbf8a7d9
@@ -41,7 +41,7 @@ class ASN1toRSconverter
         // 46083ba46a9cabd6897638241ceafa7466b0acd0d7713ffaa8b4fd741547bcfa67168b0fc7e8ed1d53b3b53f2f3c8ca75cb1e66b456bbe63296d2a97dbf8a7d9
         string referenceASN1_4 = "3044022046083ba46a9cabd6897638241ceafa7466b0acd0d7713ffaa8b4fd741547bcfa022067168b0fc7e8ed1d53b3b53f2f3c8ca75cb1e66b456bbe63296d2a97dbf8a7d9";
         string referenceRS_4 = "46083ba46a9cabd6897638241ceafa7466b0acd0d7713ffaa8b4fd741547bcfa67168b0fc7e8ed1d53b3b53f2f3c8ca75cb1e66b456bbe63296d2a97dbf8a7d9";
-        test(referenceRS_4, referenceASN1_4);
+        Test(referenceRS_4, referenceASN1_4);
 
         // 021f/0220
         // 3043021f31d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce875022025135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f
@@ -49,7 +49,7 @@ class ASN1toRSconverter
         // 0031d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce87525135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f
         string referenceASN1_5 = "3043021f31d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce875022025135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f";
         string referenceRS_5 = "0031d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce87525135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f";
-        test(referenceRS_5, referenceASN1_5);
+        Test(referenceRS_5, referenceASN1_5);
 
         // 0220/021f
         // 304302201131d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce875021f135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f
@@ -57,7 +57,7 @@ class ASN1toRSconverter
         // 1131d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce87500135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f
         string referenceASN1_6 = "304302201131d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce875021f135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f";
         string referenceRS_6 = "1131d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce87500135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f";
-        test(referenceRS_6, referenceASN1_6);
+        Test(referenceRS_6, referenceASN1_6);
 
         // 021f/021f
         // 3042021f31d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce875021f135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f
@@ -65,7 +65,7 @@ class ASN1toRSconverter
         // 0031d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce87500135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f
         string referenceASN1_7 = "3042021f31d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce875021f135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f";
         string referenceRS_7 = "0031d0565e6e7085f2d8675bae5c68fdc7ecfe5514489f132eaa70e10ddce87500135629e9341d1930bb7af5de0343f8732203755eb66b129d027bf787ad7f9f";
-        test(referenceRS_7, referenceASN1_7);
+        Test(referenceRS_7, referenceASN1_7);
 
         // 0201/0202
         // 300702015502025657
@@ -73,22 +73,22 @@ class ASN1toRSconverter
         // 00000000000000000000000000000000000000000000000000000000000000550000000000000000000000000000000000000000000000000000000000005657
         string referenceASN1_8 = "300702015502025657";
         string referenceRS_8 = "00000000000000000000000000000000000000000000000000000000000000550000000000000000000000000000000000000000000000000000000000005657";
-        test(referenceRS_8, referenceASN1_8);
+        Test(referenceRS_8, referenceASN1_8);
     }
 
-    public static void test(string signatureRShex, string signatureASN1hex)
+    public static void Test(string signatureRShex, string signatureASN1hex)
     {
         byte[] signatureRS = StringToByteArray(signatureRShex);
         byte[] signatureASN1 = StringToByteArray(signatureASN1hex);
 
-        byte[] signatureRS_convert = convertFromASN1toRS(signatureASN1, 32);
+        byte[] signatureRS_convert = ConvertFromASN1toRS(signatureASN1, 32);
         Console.WriteLine(signatureRShex);
         Console.WriteLine(ByteArrayToString(signatureRS_convert).ToLower());
         Console.WriteLine();
         Debug.Assert(signatureRS.SequenceEqual(signatureRS_convert));
     }
 
-    public static byte[] convertFromASN1toRS(byte[] signatureASN1, int size)
+    public static byte[] ConvertFromASN1toRS(byte[] signatureASN1, int size)
     {
         // Get start and length
         int sequenceR = Array.IndexOf(signatureASN1, (byte)0x02);
